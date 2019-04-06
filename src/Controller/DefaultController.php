@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use YoHang88\LetterAvatar\LetterAvatar;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
