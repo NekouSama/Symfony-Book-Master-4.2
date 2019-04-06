@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block body %}
+<script src="{{ asset('lib/hinclude/hinclude.js') }}"></script>
+{% for i in 0..10 %}
+<div class="{{ cycle(['odd', 'even'], i) }}">
+TAGGY TAGGO
+</div>
+{{ render_hinclude(controller('App\\Controller\\RegistrationController::register')) }}
+{% endfor %}
+{% endblock %}
