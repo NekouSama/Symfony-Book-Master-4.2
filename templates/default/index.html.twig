@@ -8,6 +8,7 @@
 <div class="{{ cycle(['odd', 'even'], i) }}">
 TAGGY TAGGO
 </div>
-{{ render_hinclude(controller('App\\Controller\\RegistrationController::register')) }}
 {% endfor %}
+{{ render_hinclude(controller('App\\Controller\\RegistrationController::register')) }}
+<br>
 {% endblock %}

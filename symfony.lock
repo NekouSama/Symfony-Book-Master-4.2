@@ -108,6 +108,12 @@
     "fig/link-util": {
         "version": "1.0.0"
     },
+    "guzzlehttp/psr7": {
+        "version": "1.5.2"
+    },
+    "intervention/image": {
+        "version": "2.4.2"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
@@ -135,6 +141,9 @@
     "psr/container": {
         "version": "1.0.0"
     },
+    "psr/http-message": {
+        "version": "1.0.1"
+    },
     "psr/link": {
         "version": "1.0.0"
     },
@@ -143,6 +152,9 @@
     },
     "psr/simple-cache": {
         "version": "1.0.1"
+    },
+    "ralouphie/getallheaders": {
+        "version": "2.0.5"
     },
     "sensio/framework-extra-bundle": {
         "version": "5.2",
@@ -503,6 +515,9 @@
     },
     "webmozart/assert": {
         "version": "1.4.0"
+    },
+    "yohang88/letter-avatar": {
+        "version": "2.1.0"
     },
     "zendframework/zend-code": {
         "version": "3.3.1"

@@ -4,13 +4,14 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\RegistrationFormType;
+use YoHang88\LetterAvatar\LetterAvatar;
 use App\Security\AppGlobalAuthenticator;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Guard\GuardAuthenticatorHandler;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class RegistrationController extends AbstractController
 {
@@ -31,6 +32,13 @@ class RegistrationController extends AbstractController
                     $form->get('plainPassword')->getData()
                 )
             );
+
+            //Create avatar
+            $user_avatar_directory = getenv('USER_AVATAR_DIRECTORY');
+            if ($user_avatar_directory) {
+                $avatar = new LetterAvatar($user->getEmail(), 'circle', 64);
+                $avatar->saveAs($user_avatar_directory . $user->getEmail() . '.png');
+            }
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
