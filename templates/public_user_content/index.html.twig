@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PublicUserContentController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ 'D:/Programmation/PHP/Symfony4/Symfony Book Master 4.3/website-skeleton/src/Controller/PublicUserContentController.php'|file_link(0) }}">src/Controller/PublicUserContentController.php</a></code></li>
+        <li>Your template at <code><a href="{{ 'D:/Programmation/PHP/Symfony4/Symfony Book Master 4.3/website-skeleton/templates/public_user_content/index.html.twig'|file_link(0) }}">templates/public_user_content/index.html.twig</a></code></li>
+    </ul>
+</div>
+{% endblock %}
