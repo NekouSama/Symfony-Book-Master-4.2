@@ -9,6 +9,7 @@
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword) }}
 
-        <button class="btn">Register</button>
+        <button class="btn btn-lg btn-success">Register</button> 
+        <a class="btn btn-lg btn-warning" href="{{path('app_login')}}">Already got an account ?</a>
     {{ form_end(registrationForm) }}
 {% endblock %}
